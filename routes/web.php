@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeLandingOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::view("/projects", "projects.list.index")->name("projects.list");
 Route::view("/projects/create", "projects.create.index")->name("projects.create");
 Route::get("/projects/edit/{id}", [ProjectController::class, "edit"])->name("projects.edit");
 Route::get("/projects/fetch", [ProjectController::class, "fetch"])->name("projects.fetch");
+Route::get("/projects/fetch/all", [ProjectController::class, "fetchAll"])->name("projects.fetch.all");
 Route::post("/projects/store", [ProjectController::class, "store"])->name("projects.store");
 Route::post("/projects/update", [ProjectController::class, "update"])->name("projects.update");
 Route::post("/projects/delete", [ProjectController::class, "delete"])->name("projects.delete");
@@ -51,4 +53,10 @@ Route::get("/users/fetch", [UserController::class, "fetch"])->name("users.fetch"
 Route::post("/users/store", [UserController::class, "store"])->name("users.store");
 Route::post("/users/update", [UserController::class, "update"])->name("users.update");
 Route::post("/users/delete", [UserController::class, "delete"])->name("users.delete");
+
+Route::view("/home-order", "homeOrder.index")->name("home.index");
+Route::get("/home-order/fetch", [HomeLandingOrderController::class, "fetch"])->name("home.fetch");
+Route::post("/home-order/store", [HomeLandingOrderController::class, "store"])->name("home.store");
+Route::post("/home-order/update", [HomeLandingOrderController::class, "update"])->name("home.update");
+Route::post("/home-order/delete", [HomeLandingOrderController::class, "delete"])->name("home.delete");
 

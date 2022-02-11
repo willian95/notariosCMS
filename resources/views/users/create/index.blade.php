@@ -42,22 +42,14 @@
 
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name">Contraseña</label>
-                                <input type="text" class="form-control" v-model="password">
-                                <small v-if="errors.hasOwnProperty('password')">@{{ errors['password'][0] }}</small>
-                                
-                            </div>
-
-                        </div>
-
                        
 
                     </div>
-                    {{--<div class="row">
+
+                    
+                    <div class="row">
                         <div class="col-12">
-                        <h3 class="text-center">Contenido secundario <button class="btn btn-success" @click="openSecondaryImageUpload()" >+</button></h3>
+                        <h3 class="text-center">Contenido secundario <button class="btn btn-success" data-toggle="modal" data-target="#secondaryContent">+</button></h3>
                         </div>
                     </div>
 
@@ -68,32 +60,18 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Imágen o vídeo</th>
+                                        <th>Proyecto</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr v-for="(workImage, index) in workImages">
+                                <tbody v-if="secondaryContent">
+                                    <tr v-for="(content, index) in secondaryContent">
                                         <td>@{{ index + 1 }}</td>
 
                                         <td>
-                                            <img v-if="workImage.image.indexOf('image') >= 0" :src="workImage.image" style="width: 40%;" v-if="workImage.type == 'image'">
-                                            <video class="w-100" controls v-if="workImage.image != '' && workImage.type == 'video'">
-                                                <source :src="workImage.image" type="video/mp4">
-                                                <source :src="workImage.image" type="video/ogg">
-                                                Your browser does not support the video tag.
-                                            </video>
+                                            @{{ projects.find(data => data.id == content.project_id).name }}
                                         </td>
-                                        <td>
-
-                                            <div v-if="workImage.status == 'subiendo'" class="progress-bar progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" :style="{'width': `${workImage.progress}%`}">
-                                                @{{ workImage.progress }}%
-                                            </div>
-
-                                            <p v-if="workImage.status == 'subiendo' && workImage.progress < 100">Subiendo</p>
-                                            <p v-if="workImage.status == 'subiendo' && workImage.progress == 100">Espere un momento</p>
-                                            <p v-if="workImage.status == 'listo' && workImage.progress == 100">Contenido listo</p>
-                                        </td>
+                                        
                                         <td>
                                             <button class="btn btn-danger" @click="deleteWorkImage(index)"><i class="far fa-trash-alt"></i></button>
                                         </td>
@@ -104,13 +82,38 @@
                         </div>
 
 
-                    </div>--}}
+                    </div>
 
                     <div class="row">
                         <div class="col-12">
                             <p class="text-center">
                                 <button class="btn btn-success" @click="store()">Crear</button>
                             </p>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="secondaryContent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <select class="form-control" v-model="selectedProject">
+                                    <option :value="project.id" v-for="project in projects">@{{ project.name }}</option>
+                                </select>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary" @click="addProject()">Agregar proyecto</button>
+                            </div>
+                            </div>
                         </div>
                     </div>
 

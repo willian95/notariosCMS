@@ -54,6 +54,13 @@ class ProjectController extends Controller
 
     }
 
+    function fetchAll(){
+
+        $projects = Project::all();
+        return response()->json($projects);
+
+    }
+
 
     function update(Request $request){
 

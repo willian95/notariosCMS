@@ -9,8 +9,10 @@
                 id:"{{ $user->id }}",
                 loading:false,
                 name:"{{ $user->name }}",
-                password:"",
                 email:"{{ $user->email }}",
+                secondaryContent:JSON.parse('{!! $secondaryContents !!}'),
+                selectedProject:"",
+                projects:[],
                 errors:[],
                 
             }
@@ -19,14 +21,12 @@
             
             update(){
 
-               
-
                 this.loading = true
                 axios.post("{{ route('users.update') }}", {
                     id:this.id,
                     name:this.name, 
                     email: this.email,
-                    password:this.password
+                    secondaryContent:this.secondaryContent
                 }).then(res => {
                     this.loading = false
                     if(res.data.success == true){
@@ -58,12 +58,29 @@
                 })
 
             },
+            async getProjects(){
+
+                const response = await axios.get("{{ route('projects.fetch.all') }}")
+                this.projects = response.data
+
+            },
+            addProject(){
+
+                this.secondaryContent.push({"project_id": this.selectedProject})
+
+            },
+            deleteWorkImage(index){
+
+                this.secondaryContent.splice(index, 1)
+
+            }
 
 
 
         },
         mounted(){
             
+            this.getProjects()
 
         }
 

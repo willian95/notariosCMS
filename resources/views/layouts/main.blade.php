@@ -250,12 +250,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</li>
 
-								{{--<li class="menu-item @if(strpos(url()->current(), 'sizes') > -1) menu-item-active @endif" aria-haspopup="true">
-									<a href="{{ route('sizes.index') }}" class="menu-link">
+								<li class="menu-item @if(strpos(url()->current(), 'home-order') > -1) menu-item-active @endif" aria-haspopup="true">
+									<a href="{{ route('home.index') }}" class="menu-link">
 										<i class="menu-icon fas fa-cog"></i>
-										<span class="menu-text">Tallas</span>
+										<span class="menu-text">Orden home</span>
 									</a>
-								</li>--}}
+								</li>
 
 							</ul>
 							<!--end::Menu Nav-->
