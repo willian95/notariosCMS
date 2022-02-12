@@ -5,7 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\HomeLandingOrderController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,9 +54,10 @@ Route::post("/users/store", [UserController::class, "store"])->name("users.store
 Route::post("/users/update", [UserController::class, "update"])->name("users.update");
 Route::post("/users/delete", [UserController::class, "delete"])->name("users.delete");
 
-Route::view("/home-order", "homeOrder.index")->name("home.index");
-Route::get("/home-order/fetch", [HomeLandingOrderController::class, "fetch"])->name("home.fetch");
-Route::post("/home-order/store", [HomeLandingOrderController::class, "store"])->name("home.store");
-Route::post("/home-order/update", [HomeLandingOrderController::class, "update"])->name("home.update");
-Route::post("/home-order/delete", [HomeLandingOrderController::class, "delete"])->name("home.delete");
+Route::view("/home-order", "homeProjects.list.index")->name("home.index");
+Route::view("/home-order/create", "homeProjects.create.index")->name("home.create");
+Route::get("/home-order/fetch", [HomeController::class, "fetch"])->name("home.fetch");
+Route::post("/home-order/store", [HomeController::class, "store"])->name("home.store");
+Route::post("/home-order/update", [HomeController::class, "update"])->name("home.update");
+Route::post("/home-order/delete", [HomeController::class, "delete"])->name("home.delete");
 

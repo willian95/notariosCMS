@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class HomeLandingOrder extends Model
+class HomeProject extends Model
 {
     use HasFactory;
 }
