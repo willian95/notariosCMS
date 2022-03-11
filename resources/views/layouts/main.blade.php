@@ -28,6 +28,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css" />
+
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
@@ -323,7 +325,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Copyright-->
 							<div class="text-dark text-center" style="width: 100%;">
 							<!---	<span class="text-muted font-weight-bold mr-2">2020 - 2021©</span>-->
-								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">R&M Copyright</a>
+								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">NOTARIOS VISUAL KNOWMADS/FILM PRODUCTION COMPANY/BASED IN BOGOTÁ, COLOMBIA Copyright</a>
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Nav-->
