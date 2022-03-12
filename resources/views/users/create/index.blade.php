@@ -42,6 +42,16 @@
 
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Password</label>
+                                <input type="text" class="form-control" v-model="password">
+                                <small v-if="errors.hasOwnProperty('email')">@{{ errors['email'][0] }}</small>
+                                
+                            </div>
+
+                        </div>
+
                        
 
                     </div>

@@ -10,6 +10,7 @@
                 loading:false,
                 name:"{{ $user->name }}",
                 email:"{{ $user->email }}",
+                password: "{{ $user->password }}",
                 secondaryContent:JSON.parse('{!! $secondaryContents !!}'),
                 selectedProject:"",
                 projects:[],

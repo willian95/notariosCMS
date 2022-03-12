@@ -10,18 +10,19 @@ use App\Models\Client;
 class UserController extends Controller
 {
 
-    function sendEmail($name, $email, $client_id){
+    function sendEmail($name, $email, $client_id, $password){
 
 
         $data = [
             "name" => $name,
             "email" =>$email,
-            "client_id" => $client_id
+            "client_id" => $client_id,
+            "password" => $password
         ];
         
         \Mail::send("emails.client", $data, function($message) use ($name, $email) {
 
-            $message->to($name, $email)->subject("Has sido invitado para ingresar a un contenido");
+            $message->to($email)->subject("Has sido invitado para ingresar a un contenido");
             $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
 
         });
@@ -53,6 +54,7 @@ class UserController extends Controller
         $client = new Client;
         $client->name = $request->name;
         $client->email = $request->email;
+        $client->password = $request->password;
         $client->save();
 
         $this->storeSecondaryContent($request, $client->id);
@@ -60,7 +62,8 @@ class UserController extends Controller
         $data = [
             "name" => $request->name,
             "email" =>$request->email,
-            "client_id" => $client->id
+            "client_id" => $client->id,
+            "password" => $request->password
         ];
 
         $name = $request->name;
@@ -82,6 +85,11 @@ class UserController extends Controller
         $client = Client::find($request->id);
         $client->name = $request->name;
         $client->email = $request->email;
+
+        if(isset($request->password)){
+            $client->password = $request->password;
+        }
+        
         $client->update();
 
         foreach(SecondaryContent::where("client_id", $client->id)->get() as $content){
@@ -90,7 +98,7 @@ class UserController extends Controller
 
         $this->storeSecondaryContent($request, $client->id);
 
-        $this->sendEmail($request->name, $request->email, $client->id);
+        $this->sendEmail($request->name, $request->email, $client->id, $request->password);
 
         return response()->json(["msg" => "Usuario actualizado", "success" => true], 200);
 

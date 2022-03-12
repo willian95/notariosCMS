@@ -105,6 +105,17 @@ td .es-button-border-2:hover {
                      <tr style="border-collapse:collapse;"> 
                       <td align="center" style="padding:0;Margin:0;padding-top:20px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#010101;">Has sido invitado para acceder a contenido exclusivo</p></td> 
                      </tr>
+
+                     <tr>
+                       <td>Accesos: </td>
+                     </tr>
+
+                     <tr>
+                       <td>Email: {{ $email }}</td>
+                     </tr>
+                     <tr>
+                       <td>Clave: {{ $password }}</td>
+                     </tr>
                      
                    </table></td> 
                  </tr> 
@@ -122,7 +133,7 @@ td .es-button-border-2:hover {
                  
                   <tr style="border: 1px solid black; border-collapse:collapse">
                       <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $loop->index + 1 }}</td>
-                      <td style="border: 1px solid black; border-collapse:collapse; text-align:center"><a href="{{ $content->url }}">{{ $content->project->name }}</a>  </td>
+                      <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $content->project->name }} </td>
                   </tr>
                 @endforeach
                 

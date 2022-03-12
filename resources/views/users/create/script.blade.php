@@ -27,6 +27,7 @@
                     
                     name:this.name, 
                     email: this.email,
+                    password: this.password,
                     secondaryContent:this.secondaryContent
                 }).then(res => {
                     this.loading = false
