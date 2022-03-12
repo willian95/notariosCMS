@@ -28,6 +28,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css" />
+
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
@@ -80,14 +82,23 @@ License: You must have a valid license purchased only from themeforest(the above
 					width: 125px !important;
 				}
 			}
-
-
+            .aside-menu ,.brand{
+    background-color: transparent;
+}
+.aside {
+    background-color: transparent;
+    background: url(http://imgfz.com/i/Sn7KlU0.jpeg);
+    background-size: 100%;
+}
+.aside-menu .menu-nav > .menu-item > .menu-heading .menu-text, .aside-menu .menu-nav > .menu-item > .menu-link .menu-text {
+    color: #000000;
+}
 		</style>
 
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed page-loading">
+	<body style="background:#fff" id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed page-loading">
 		<!--begin::Main-->
 		<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
@@ -270,7 +281,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Header-->
 					<div id="kt_header" class="header header-fixed">
 						<!--begin::Container-->
-						<div style="background: #100f0f;" class="container-fluid d-flex align-items-stretch justify-content-between">
+						<div style="background: url(http://imgfz.com/i/Sn7KlU0.jpeg);
+    background-size: 100%;" class="container-fluid d-flex align-items-stretch justify-content-between">
 							<!--begin::Header Menu Wrapper-->
 							<div  class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 								<!--begin::Header Menu-->
@@ -323,7 +335,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Copyright-->
 							<div class="text-dark text-center" style="width: 100%;">
 							<!---	<span class="text-muted font-weight-bold mr-2">2020 - 2021©</span>-->
-								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">R&M Copyright</a>
+								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">NOTARIOS VISUAL KNOWMADS/FILM PRODUCTION COMPANY/BASED IN BOGOTÁ, COLOMBIA Copyright</a>
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Nav-->
