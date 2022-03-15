@@ -31,7 +31,7 @@
                     <div class="card-body">
                         <span class="svg-icon svg-icon-info svg-icon-3x ml-n1">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Cart3.svg-->
-                            <img width="40px" class="menu-icon" src="http://imgfz.com/i/vUMY8pb.png" alt="" srcset="">
+                            <img width="40px" class="menu-icon" src="https://imgfz.com/i/vUMY8pb.png" alt="" srcset="">
                             <!--end::Svg Icon-->
                         </span>
                         <div class="text-inverse-white font-weight-bolder font-size-h5 mb-2 mt-5">Directores: 1</div>

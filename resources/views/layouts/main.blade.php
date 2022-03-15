@@ -207,7 +207,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 								<li class="menu-item menu-item-submenu @if(strpos(url()->current(), 'projects') > -1) menu-item-active @endif" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
-                                    <img width="40px" class="menu-icon" src="http://imgfz.com/i/vUMY8pb.png" alt="" srcset="">
+                                    <img width="40px" class="menu-icon" src="https://imgfz.com/i/vUMY8pb.png" alt="" srcset="">
 										<span class="menu-text">Directores</span>
 										<i class="menu-arrow"></i>
 									</a>
