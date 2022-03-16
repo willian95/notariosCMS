@@ -253,6 +253,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<span class="menu-text">Actions</span>
 												</span>
 											</li>
+											<!---->
 											<li class="menu-item" aria-haspopup="true">
 												<a href="{{ route('users.create') }}" class="menu-link">
 													<i class="menu-bullet menu-bullet-line">
