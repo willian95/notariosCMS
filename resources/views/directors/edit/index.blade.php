@@ -14,7 +14,7 @@
                 <!--begin::Header-->
                 <div class="card-header flex-wrap border-0 pt-6 pb-0">
                     <div class="card-title">
-                        <h3 class="card-label">Crear proyecto
+                        <h3 class="card-label">Editar director
                     </div>
                 </div>
                 <!--end::Header-->
@@ -39,7 +39,12 @@
                                     <button @click="uploadImage()" class="btn btn-info">Upload files</button>
                                 </p>
 
-                                <img :src="imagePreview" style="width: 40%;">
+                                <img v-if="imageFileType == 'image'" :src="imagePreview" style="width: 40%;">
+                                <video class="w-100" controls v-if="imagePreview != '' && imageFileType == 'video'">
+                                    <source :src="imagePreview" type="video/mp4">
+                                    <source :src="imagePreview" type="video/ogg">
+                                    Your browser does not support the video tag.
+                                </video>
 
                                 <small v-if="errors.hasOwnProperty('image')">@{{ errors['image'][0] }}</small>
                             </div>

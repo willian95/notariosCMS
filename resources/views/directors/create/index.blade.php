@@ -14,7 +14,7 @@
                 <!--begin::Header-->
                 <div class="card-header flex-wrap border-0 pt-6 pb-0">
                     <div class="card-title">
-                        <h3 class="card-label">Crear proyecto
+                        <h3 class="card-label">Crear director
                     </div>
                 </div>
                 <!--end::Header-->
@@ -40,7 +40,7 @@
                                 </p>
 
                                 <img v-if="imageFileType == 'image'" :src="imagePreview" style="width: 40%;">
-                                <video class="w-100" controls v-if="imagePreview != '' && imagePreview == 'video'">
+                                <video class="w-100" controls v-if="imagePreview != '' && imageFileType == 'video'">
                                     <source :src="imagePreview" type="video/mp4">
                                     <source :src="imagePreview" type="video/ogg">
                                     Your browser does not support the video tag.

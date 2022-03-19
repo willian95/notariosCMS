@@ -99,6 +99,8 @@
                             this.imagePreview = result.info.secure_url
                             this.finalPictureName = result.info.secure_url
 
+                            console.log(this.imageFileType)
+
                         }
                     }
                 )
