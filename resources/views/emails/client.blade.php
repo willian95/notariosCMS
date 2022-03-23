@@ -116,30 +116,16 @@ td .es-button-border-2:hover {
                      <tr>
                        <td>Clave: {{ $password }}</td>
                      </tr>
+
+                     <tr>
+                       <td><a href="{{ url('/private') }}">Ir a la carpeta private</a></td>
+                     </tr>
                      
                    </table></td> 
                  </tr> 
                </table></td> 
              </tr>
-             <tr style="border-collapse:collapse;">
-              <td align="left" style="Margin:0;padding-bottom:15px;padding-top:30px;padding-left:30px;padding-right:30px;border-radius:10px 10px 0px 0px;background-color:#FFFFFF;" bgcolor="#ffffff">
-                <table ellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                <tr style="border: 1px solid black; border-collapse:collapse">
-                  <th style="border: 1px solid black;border-collapse:collapse">#</th>
-                  <th style="border: 1px solid black;border-collapse:collapse">Proyecto</th>
-                </tr>
 
-                @foreach(App\Models\SecondaryContent::where("client_id", $client_id)->with("project")->get() as $content)
-                 
-                  <tr style="border: 1px solid black; border-collapse:collapse">
-                      <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $loop->index + 1 }}</td>
-                      <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $content->project->name }} </td>
-                  </tr>
-                @endforeach
-                
-                </table>
-              </td>
-             </tr> 
             
            </table></td> 
          </tr> 
