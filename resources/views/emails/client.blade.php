@@ -118,7 +118,7 @@ td .es-button-border-2:hover {
                      </tr>
 
                      <tr>
-                       <td><a href="{{ url('/private') }}">Ir a la carpeta private</a></td>
+                       <td><a href="{{ env('URL_FRONT') }}/private">Ir a la carpeta private</a></td>
                      </tr>
                      
                    </table></td> 
