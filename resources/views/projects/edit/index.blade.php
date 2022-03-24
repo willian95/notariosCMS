@@ -46,7 +46,7 @@
                                     <source :src="imagePreview" type="video/ogg">
                                     Your browser does not support the video tag.
                                 </video>
-                                <span v-if="workImage.type == 'pdf'">PDF</span>
+                                
 
                                 <small v-if="errors.hasOwnProperty('image')">@{{ errors['image'][0] }}</small>
                             </div>
@@ -89,6 +89,7 @@
                                                 <source :src="workImage.image" type="video/ogg">
                                                 Your browser does not support the video tag.
                                             </video>
+                                            <span v-if="workImage.type == 'pdf'">PDF</span>
                                         </td>
                                         <td>
 
