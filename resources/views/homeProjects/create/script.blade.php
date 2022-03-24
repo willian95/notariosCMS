@@ -16,6 +16,8 @@
                 imagePreview:"",
                 imageFileType:"video",
                 finalPictureName:"",
+                videoComercialPreview:"",
+                videoComercialName:""
 
                 
             }
@@ -29,6 +31,7 @@
                     title:this.title, 
                     director:this.director,
                     image: this.finalPictureName,
+                    comercial: this.videoComercialName,
                     order: this.order
                 }).then(res => {
                     this.loading = false
@@ -76,6 +79,27 @@
                      
                             this.imagePreview = result.info.secure_url
                             this.finalPictureName = result.info.secure_url
+
+                        }
+                    }
+                )
+
+                myWidget.open()
+
+            },
+
+            uploadImage2(){
+
+                var myWidget = cloudinary.createUploadWidget({
+                        cloudName: 'laliberty', 
+                        uploadPreset: 'test_notarios',
+                        api_key:'913447513718925',
+                        sources: [ 'local', 'url', 'image_search'],
+                    }, (error, result) => { 
+                        if (!error && result && result.event === "success") { 
+                    
+                            this.videoComercialPreview = result.info.secure_url
+                            this.videoComercialName = result.info.secure_url
 
                         }
                     }

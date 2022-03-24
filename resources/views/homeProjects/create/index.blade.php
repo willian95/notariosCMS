@@ -54,7 +54,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="image">Vídeo (1024x900px | max: 8 Mb )</label>
+                                <label for="image">Vídeo Intro</label>
                                 <p>
                                     <button @click="uploadImage()" class="btn btn-info">Upload files</button>
                                 </p>
@@ -62,6 +62,23 @@
                                 <video class="w-100" controls v-if="imagePreview != ''">
                                     <source :src="imagePreview" type="video/mp4">
                                     <source :src="imagePreview" type="video/ogg">
+                                    Your browser does not support the video tag.
+                                </video>
+
+                                <small v-if="errors.hasOwnProperty('image')">@{{ errors['image'][0] }}</small>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="image">Vídeo comercial</label>
+                                <p>
+                                    <button @click="uploadImage2()" class="btn btn-info">Upload files</button>
+                                </p>
+
+                                <video class="w-100" controls v-if="videoComercialPreview != ''">
+                                    <source :src="videoComercialPreview" type="video/mp4">
+                                    <source :src="videoComercialPreview" type="video/ogg">
                                     Your browser does not support the video tag.
                                 </video>
 
