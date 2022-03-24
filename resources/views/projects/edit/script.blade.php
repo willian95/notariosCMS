@@ -118,7 +118,7 @@
                             console.log('Done! Here is the image info: ', result.info); 
 
 
-                            this.workImages.push({image: result.info.secure_url, finalName: result.info.secure_url, originalName: result.info.original_filename, "type": result.info.resource_type})
+                            this.workImages.push({image: result.info.secure_url, finalName: result.info.secure_url, originalName: result.info.original_filename, "type": result.info.format == "pdf" ? "pdf" : result.info.resource_type})
 
                         }
                     }

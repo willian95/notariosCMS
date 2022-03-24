@@ -83,6 +83,7 @@
                                                 <source :src="workImage.image" type="video/ogg">
                                                 Your browser does not support the video tag.
                                             </video>
+                                            <span v-if="workImage.type == 'pdf'">PDF</span>
                                         </td>
                                         <td>
 
