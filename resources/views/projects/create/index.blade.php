@@ -35,7 +35,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="image">Imágen o vídeo (1024x900px | max: 8 Mb )</label>
+                                <label for="image">Imágen</label>
                                 <p>
                                     <button @click="uploadImage()" class="btn btn-info">Upload files</button>
                                 </p>
