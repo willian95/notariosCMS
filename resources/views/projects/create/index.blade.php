@@ -41,11 +41,6 @@
                                 </p>
 
                                 <img v-if="imageFileType == 'image'" :src="imagePreview" style="width: 40%;">
-                                <video class="w-100" controls v-if="imagePreview != '' && imagePreview == 'video'">
-                                    <source :src="imagePreview" type="video/mp4">
-                                    <source :src="imagePreview" type="video/ogg">
-                                    Your browser does not support the video tag.
-                                </video>
 
                                 <small v-if="errors.hasOwnProperty('image')">@{{ errors['image'][0] }}</small>
                             </div>
@@ -73,7 +68,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Imágen o vídeo</th>
+                                        <th>Archivo</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
