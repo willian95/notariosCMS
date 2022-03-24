@@ -77,7 +77,7 @@
                                         <td>@{{ index + 1 }}</td>
 
                                         <td>
-                                            <img v-if="workImage.image.indexOf('image') >= 0" :src="workImage.image" style="width: 40%;" v-if="workImage.type == 'image'">
+                                            <img :src="workImage.image" style="width: 40%;" v-if="workImage.type == 'image'">
                                             <video class="w-100" controls v-if="workImage.image != '' && workImage.type == 'video'">
                                                 <source :src="workImage.image" type="video/mp4">
                                                 <source :src="workImage.image" type="video/ogg">
