@@ -18,8 +18,8 @@
                 secondaryPicture:"",
 
                 imagePreview:"",
-                imageFileType:"",
-                finalPictureName:"",
+                imageFileType:"image",
+                finalPictureName:"test",
 
                 secondaryPicture:"",
                 secondaryPreviewPicture:"",

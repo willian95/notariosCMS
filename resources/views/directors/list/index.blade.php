@@ -44,10 +44,6 @@
                                     </th>
 
                                     <th class="datatable-cell datatable-cell-sort" style="width: 170px;">
-                                        <span>Imagen</span>
-                                    </th>
-
-                                    <th class="datatable-cell datatable-cell-sort" style="width: 170px;">
                                         <span>Acciones</span>
                                     </th>
                                 </tr>
@@ -56,11 +52,6 @@
                                 <tr v-for="director in directors">
                                     <td class="datatable-cell">
                                         @{{ director.name }}
-                                    </td>
-
-                                    <td class="datatable-cell">
-                                        <img :src="director.image" style="width: 40%;">
-                                        
                                     </td>
                                     
                                     <td>

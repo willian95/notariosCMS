@@ -20,7 +20,7 @@
                 secondaryPicture:"",
 
                 imagePreview:"{{ $director->image }}",
-                imageFileType:"",
+                imageFileType:"image",
                 finalPictureName:"",
 
                 secondaryPicture:"",
