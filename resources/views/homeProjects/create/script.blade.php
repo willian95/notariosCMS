@@ -42,7 +42,7 @@
                             text: "Proyecto creado!",
                             icon: "success"
                         }).then(function() {
-                            window.location.href = "{{ route('directors.list') }}";
+                            window.location.href = "{{ route('home.index') }}";
                         });
                         
 
