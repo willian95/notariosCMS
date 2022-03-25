@@ -5,6 +5,7 @@ use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -70,3 +71,11 @@ Route::get('/films/fetch', [FilmController::class, 'fetch'])->name('films.fetch'
 Route::post('/films/store', [FilmController::class, 'store'])->name('films.store');
 Route::post('/films/update', [FilmController::class, 'update'])->name('films.update');
 Route::post('/films/delete', [FilmController::class, 'delete'])->name('films.delete');
+
+Route::view('/services', 'services.list.index')->name('services.list');
+Route::view('/services/create', 'services.create.index')->name('services.create');
+Route::get('/services/edit/{id}', [ServiceController::class, 'edit'])->name('services.edit');
+Route::get('/services/fetch', [ServiceController::class, 'fetch'])->name('services.fetch');
+Route::post('/services/store', [ServiceController::class, 'store'])->name('services.store');
+Route::post('/services/update', [ServiceController::class, 'update'])->name('services.update');
+Route::post('/services/delete', [ServiceController::class, 'delete'])->name('services.delete');
