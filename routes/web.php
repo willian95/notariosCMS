@@ -58,6 +58,7 @@ Route::post('/users/delete', [UserController::class, 'delete'])->name('users.del
 Route::view('/home-order', 'homeProjects.list.index')->name('home.index');
 Route::view('/home-order/create', 'homeProjects.create.index')->name('home.create');
 Route::get('/home-order/fetch', [HomeController::class, 'fetch'])->name('home.fetch');
+Route::get('/home-order/{id}', [HomeController::class, 'edit']);
 Route::post('/home-order/store', [HomeController::class, 'store'])->name('home.store');
 Route::post('/home-order/update', [HomeController::class, 'update'])->name('home.update');
 Route::post('/home-order/delete', [HomeController::class, 'delete'])->name('home.delete');

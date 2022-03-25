@@ -75,6 +75,7 @@
                                     </td>
                                     
                                     <td>
+                                        <a class="btn btn-info" :href="'{{ url('/home-order/') }}'+'/'+project.id"><i class="far fa-edit"></i></a>
                                         <button class="btn btn-secondary" @click="erase(project.id)"><i class="far fa-trash-alt"></i></button>
                                     </td>
                                 </tr>
