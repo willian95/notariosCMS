@@ -85,8 +85,8 @@
                                         <td>
                                             <img :src="workImage.finalName" style="width: 40%;" v-if="workImage.type == 'image'">
                                             <video class="w-100" controls v-if="workImage.image != '' && workImage.type == 'video'">
-                                                <source :src="workImage.image" type="video/mp4">
-                                                <source :src="workImage.image" type="video/ogg">
+                                                <source :src="workImage.finalName" type="video/mp4">
+                                                <source :src="workImage.finalName" type="video/ogg">
                                                 Your browser does not support the video tag.
                                             </video>
                                             <span v-if="workImage.type == 'pdf'">PDF</span>
