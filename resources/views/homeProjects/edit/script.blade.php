@@ -72,9 +72,9 @@
             uploadImage(){
 
                 var myWidget = cloudinary.createUploadWidget({
-                        cloudName: 'laliberty', 
-                        uploadPreset: 'test_notarios',
-                        api_key:'913447513718925',
+                        cloudName: 'duewi8k6b', 
+                        api_key:'717481689751616',
+                        uploadPreset: 'notarios',
                         sources: [ 'local', 'url', 'image_search'],
                     }, (error, result) => { 
                         if (!error && result && result.event === "success") { 
@@ -93,9 +93,9 @@
             uploadImage2(){
 
                 var myWidget = cloudinary.createUploadWidget({
-                        cloudName: 'laliberty', 
-                        uploadPreset: 'test_notarios',
-                        api_key:'913447513718925',
+                        cloudName: 'duewi8k6b', 
+                        api_key:'717481689751616',
+                        uploadPreset: 'notarios',
                         sources: [ 'local', 'url', 'image_search'],
                     }, (error, result) => { 
                         if (!error && result && result.event === "success") { 
